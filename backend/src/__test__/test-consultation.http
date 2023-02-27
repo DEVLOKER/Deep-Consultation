@@ -1,0 +1,66 @@
+###
+POST http://localhost:4000/consultations/publish HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "consultation 01", 
+    "client": "63e754302075e79f56feb215",
+    "files": {
+        "client": [
+            { "name": "aaa.zip", "size": 3250585 },
+            { "name": "nom de fichier.png", "size": 2950585 },
+            { "name": "nom de fichier.pdf", "size": 1150585 }
+        ]
+    }
+}
+
+
+###
+GET http://localhost:4000/consultations/
+    ?client=63e8fb6b96d7718cfe33c791
+    &state=0
+
+
+###
+GET http://localhost:4000/consultations/63de0b6e29f0e7fa6c274a9d
+
+
+###
+
+PUT http://localhost:4000/consultations/63de10ded84d33dc22ca429e HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "consultation name update",
+    "files": {
+        "client": [
+            { "name": "aaa.zip", "size": 3250585 },
+            { "name": "nom de fichier.png", "size": 2950585 }
+        ]
+    }
+}
+
+###
+
+DELETE http://localhost:4000/consultations/63de10ded84d33dc22ca429e HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+
+###
+PATCH http://localhost:4000/consultations/63de874d439b54eaf11741f9 HTTP/1.1
+Content-Type: application/json
+
+{
+    "files": {
+        "admin": [
+            { "name": "aaa.zip", "size": 3250585 },
+            { "name": "nom de fichier.png", "size": 2950585 }
+        ]
+    }
+}
+
+
+###
+
+GET http://localhost:4000/files/download/63e8fb6b96d7718cfe33c791/63ea47c9f183f68b2d2aae84 
+    ?name=site.pdf
