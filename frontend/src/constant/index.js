@@ -7,7 +7,8 @@ export const constants = {
     USER_CLIENT: "USER_CLIENT",
     FORM_ADD: "FORM_ADD",
     FORM_EDIT: "FORM_EDIT",
-    SERVER_URL: 'http://localhost:4000',
+    // SERVER_URL: 'http://localhost:4000',
+    SERVER_URL: 'https://deep-consultation.onrender.com',
     REFRESH_INTERVAL: 2000, // 2s
 }
 
