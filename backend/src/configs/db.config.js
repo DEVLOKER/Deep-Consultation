@@ -3,12 +3,13 @@ const env = process.env
 
 
 const dbConfig = {
-    host: env.DB_HOST,
-    port: env.DB_PORT || 27017,
-    database: env.DB_NAME || 'deepconsultation',
-    user: env.DB_USER || '',
-    password: env.DB_PASSWORD || '',
-    dbURL: `mongodb://${env.DB_HOST}:${env.DB_PORT}/${env.DB_NAME}`,
+    // host: env.DB_HOST,
+    // port: env.DB_PORT || 27017,
+    // database: env.DB_NAME || 'deepconsultation',
+    // user: env.DB_USER || '',
+    // password: env.DB_PASSWORD || '',
+    // dbURL: `mongodb://${env.DB_HOST}:${env.DB_PORT}/${env.DB_NAME}`,
+    dbURL: `${env.DB_URL}`,
 };
 
 module.exports = dbConfig
